@@ -1,5 +1,5 @@
 body {
-    background-color: #FF6F61;
+    background-color:black;
     color: #111;
     font: 1em helvetica, arial, sans-serif;
   }
@@ -9,14 +9,18 @@ body {
     padding: 1em 1em;
     margin: 1em;
     overflow: hidden;
-    display: grid;
-    width:50%;
+    width:80%;
     align-content: center;
     color: white;
    
   }
 
-  
+  #app{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: aliceblue;
 
+    
+  }
 
   
