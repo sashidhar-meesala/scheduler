@@ -1,187 +1,201 @@
-
 // OBJECT
 const course1 = {
-    name: `Tools & Workflow`,
-    code: `WDDM-115`,
-    instructor: `Kadeem Best`,
-    start: { term: `Fall`, year: 2019 },
-    weeks: 15,
-    break: true,
-    duration: 160
-  };
+  name: `Tools & Workflow`,
+  code: `WDDM-115`,
+  instructor: `Kadeem Best`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: true,
+  duration: 160
+};
 
-  const course2 = {
-    name: `Design and prototyping`,
-    code: `WDDM-117`,
-    instructor: `cory coletta`,
-    start: { term: `Fall`, year: 2019 },
-    weeks: 15,
-    break: 'yes',
-    duration: 160
-  };
+const course2 = {
+  name: `Design and prototyping`,
+  code: `WDDM-117`,
+  instructor: `cory coletta`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
 
-  const course3 = {
-    name: `applied programming`,
-    code: `WDDM-113`,
-    instructor: `Rocco`,
-    start: { term: `Fall`, year: 2019 },
-    weeks: 15,
-    break: 'yes',
-    duration: 160
-  };
+const course3 = {
+  name: `applied programming`,
+  code: `WDDM-113`,
+  instructor: `Rocco`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
 
-  const course4 = {
-    name: `applied design`,
-    code: `WDDM-114`,
-    instructor: `Rocco`,
-    start: { term: `Fall`, year: 2019 },
-    weeks: 15,
-    break: 'yes',
-    duration: 160
-  };
+const course4 = {
+  name: `applied design`,
+  code: `WDDM-114`,
+  instructor: `Rocco`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
 
-  const course5 = {
-    name: `web production`,
-    code: `WDDM-116`,
-    instructor: `Miro`,
-    start: { term: `Fall`, year: 2019 },
-    weeks: 15,
-    break: 'yes',
-    duration: 160
-  };
-  
-  
-
-
-  const allcourses =[course1,course2,course3,course4,course5];
-
- 
-  function getDurationFromMinutes (minutes) {
-  
-    let hrs = Math.floor(minutes / 60);
-    let mins = minutes % 60;
-    
-    return `${hrs} hr, ${mins} min`;
-  }
-  
-function setCourseHTML(){
-for (let i = 0; i < allcourses.length; i++) {
-    document.getElementById(`app`).innerHTML += `
-    <section class="course">
-    <h1>Course Name: <strong>${allcourses[i].name}</strong></h1>
-        <ul>
-        
-          <li>Course Code: <strong>${allcourses[i].code}</strong></li>
-          <li>Instructor: <strong>${allcourses[i].instructor}</strong></li>
-          <li>Start: <strong >${allcourses[i].start.term},${allcourses[i].start.year}</strong></li>
-        
-          <li>
-            Weeks: <strong>${allcourses[i].weeks}</strong>
-            <ul>
-              <!-- Reminder: Compare vs just listing break weeks -->
-              <li>Includes Break: <strong>${allcourses[i].break}</strong></li>
-            </ul>
-          </li> 
-          <li>Duration: <strong >2:40</strong></li> <!-- Use a function to convert from minutes -->
-        </ul>
-        </section>`;
-
-}}
+const course5 = {
+  name: `web production`,
+  code: `WDDM-116`,
+  instructor: `Miro`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
 
 
-setCourseHTML();
+//test adding more courses
+const course6 = {
+  name: `accessible media`,
+  code: `WDDM-119`,
+  instructor: `many`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
 
 
+const course7 = {
+  name: `accessible media`,
+  code: `WDDM-119`,
+  instructor: `many`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
+
+const course8 = {
+  name: `accessible media`,
+  code: `WDDM-119`,
+  instructor: `many`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+
+};
+const course9 = {
+  name: `accessible media`,
+  code: `WDDM-119`,
+  instructor: `many`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
+
+const course10 = {
+  name: `accessible media`,
+  code: `WDDM-119`,
+  instructor: `many`,
+  start: {
+    term: `Fall`,
+    year: 2019
+  },
+  weeks: 15,
+  break: 'yes',
+  duration: 160
+};
+
+const sem1 =[course1, course2, course3,course4,course5,course6];
+const sem2=[course7,course8,course9,course10];
+
+const allcourses = [course1, course2, course3,course4,course5,course6,course7,course8,course9,course10]
 
 
-/*
+function getDurationFromMinutes(minutes) {
 
- //function setting course html
+  let hrs = Math.floor(minutes / 60);
+  let mins = minutes % 60;
 
- function setCourseHTML(course){
-    document.getElementById(`name1`).innerHTML = course.name;
-    document.getElementById(`code1`).innerHTML = course.code;
-    document.getElementById(`instructor1`).innerHTML = course.instructor;
-    document.getElementById(`start1`).innerHTML = `${course.start.term} ${course.start.year}`;
-    document.getElementById(`weeks1`).innerHTML = course.weeks;
-    document.getElementById(`break1`).innerHTML = course.break;
-    document.getElementById(`duration1`).innerHTML = getDurationFromMinutes(course.duration);
-    document.getElementById(`name1`).style.color = `#f00`;
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//printing all the course details 
-//accessing course details and putting it in html
-for (let i = 0; i < allcourses.length; i++) {
-    setCourseHTML(allcourses[i])
+  return `${hrs} hr, ${mins} min`;
 }
 
-function getCourseAsHtmlString(coursenum)
- {
-     return `
-   document.getElementById(app).innerHTML +=
-   <h3 id="name1"></h3>
+function getCourseAsHtml(allcourses) {
+  return `
+    <section class="course">
+    <h1>Course Name: <strong>${allcourses.name}</strong></h1>
         <ul>
-          <li>Course Code: <strong id="code${coursenum}"></strong></li>
-          <li>Instructor: <strong id="instructor${coursenum}"></strong></li>
-          <li>Start: <strong id="start${coursenum}"></strong></li>
+        
+          <li>Course Code: <strong>${allcourses.code}</strong></li>
+          <li>Instructor: <strong>${allcourses.instructor}</strong></li>
+          <li>Start: <strong >${allcourses.start.term},${allcourses.start.year}</strong></li>
           <li>
-            <!-- Reminder: Compare vs 14 + 1 break -->
-            Weeks: <strong id="weeks${coursenum}"></strong>
+            Weeks: <strong>${allcourses.weeks}</strong>
             <ul>
               <!-- Reminder: Compare vs just listing break weeks -->
-              <li>Includes Break: <strong id="break${coursenum}"></strong></li>
+              <li>Includes Break: <strong>${allcourses.break}</strong></li>
             </ul>
-          </li>
-          <li>Duration: <strong id="duration1">2:40</strong></li> <!-- Use a function to convert from minutes -->
+          </li> 
+          <li>Duration: <strong >2:40</strong></li> 
         </ul>
-   `;
-   
- }
+        </section>`;
+}
 
- //function setting course html
+function showme3(){
+  document.getElementById('app').innerHTML = allcourses.slice(0,3).map(getCourseAsHtml).join('\n');
+}
+function showme4(){
+  document.getElementById('app').innerHTML = allcourses.slice(0,4).map(getCourseAsHtml).join('\n');
+}
 
- function setCourseHTML(course){
-    document.getElementById(`name1`).innerHTML = course.name;
-    document.getElementById(`code1`).innerHTML = course.code;
-    document.getElementById(`instructor1`).innerHTML = course.instructor;
-    document.getElementById(`start1`).innerHTML = `${course.start.term} ${course.start.year}`;
-    document.getElementById(`weeks1`).innerHTML = course.weeks;
-    document.getElementById(`break1`).innerHTML = course.break;
-    document.getElementById(`duration1`).innerHTML = getDurationFromMinutes(course.duration);
-    document.getElementById(`name1`).style.color = `#f00`;
- }
+function showmeall(){
+  document.getElementById('app').innerHTML = allcourses.map(getCourseAsHtml).join('\n');
+}
 
- //function getCourseAsHtmlString
-
-
- getCourseAsHtmlString(0);
+function showmesem1(){
+  document.getElementById('app').innerHTML = sem1.map(getCourseAsHtml).join('\n');
+}
 
 
-//document.getElementById(`name${coursenum}`).innerHTML += allcourses[1].name;
- // document.getElementById(`code${coursenum}`).innerHTML += allcourses[1].code;
- // document.getElementById(`instructor${coursenum}`).innerHTML += allcourses[1].instructor;
-  //document.getElementById(`start${coursenum}`).innerHTML += `${allcourses[1].start.term} ${allcourses[1].start.year}`;
- // document.getElementById(`weeks${coursenum}`).innerHTML += allcourses[1].weeks;
- // document.getElementById(`break${coursenum}`).innerHTML += allcourses[1].break;
- // document.getElementById(`duration${coursenum}`).innerHTML += getDurationFromMinutes(allcourses[1].duration);
-  
- // document.getElementById(`name`).style.color = `#f00`;
+function showmesem2(){
+  document.getElementById('app').innerHTML = sem2.map(getCourseAsHtml).join('\n');
+}
 
-*/
+
+document.getElementById('showme3').addEventListener("click",showme3);
+document.getElementById('showme4').addEventListener("click",showme4);
+document.getElementById('showmeall').addEventListener("click",showmeall);
+document.getElementById('showmesem1').addEventListener("click",showmesem1);
+document.getElementById('showmesem2').addEventListener("click",showmesem2);
+
+document.getElementById('app').innerHTML = allcourses.map(getCourseAsHtml).join('\n');
+
+//execution
+
+//getCourseAsHtml(allcourses);
